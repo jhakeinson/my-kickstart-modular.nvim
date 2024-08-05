@@ -7,7 +7,11 @@
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
--- vim.opt.relativenumber = true
+vim.opt.relativenumber = true
+
+-- deactivate relative numbers in insert mode
+vim.cmd [[autocmd InsertEnter * :set norelativenumber]]
+vim.cmd [[autocmd InsertLeave * :set relativenumber]]
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
@@ -62,4 +66,26 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+vim.opt.backup = false
+-- vim.opt.showcmd = true
+-- vim.opt.cmdheight = 0
+-- vim.opt.laststatus = 0
+vim.opt.expandtab = true
+-- vim.opt.scrolloff = 10
+-- vim.opt.inccommand = "split"
+-- vim.opt.ignorecase = true
+vim.opt.smarttab = true
+-- vim.opt.breakindent = true
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
+vim.opt.wrap = true
+vim.opt.backspace = { 'start', 'eol', 'indent' }
+vim.opt.path:append { '**' }
+vim.opt.wildignore:append { '*/node_modules/*' }
+-- vim.opt.splitbelow = true
+-- vim.opt.splitright = true
+vim.opt.splitkeep = 'cursor'
+-- vim.opt.mouse = ""
 -- vim: ts=2 sts=2 sw=2 et
